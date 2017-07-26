@@ -30,6 +30,7 @@ function plugin(Vue) {
             })
           })
         }
+        
         if (loadScriptList[url] === 'loading' && script) {
           return new Promise((resolve) => {
             const intervalId = setInterval(() => {

@@ -6,6 +6,10 @@ var _regenerator = require('babel-runtime/regenerator');
 
 var _regenerator2 = _interopRequireDefault(_regenerator);
 
+var _promise = require('babel-runtime/core-js/promise');
+
+var _promise2 = _interopRequireDefault(_promise);
+
 var _asyncToGenerator2 = require('babel-runtime/helpers/asyncToGenerator');
 
 var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
@@ -46,7 +50,7 @@ function plugin(Vue) {
                 }
 
                 loadScriptList[url] = 'loading';
-                return _context2.abrupt('return', new Promise(function () {
+                return _context2.abrupt('return', new _promise2.default(function () {
                   var _ref2 = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee(resolve) {
                     var script;
                     return _regenerator2.default.wrap(function _callee$(_context) {
@@ -89,7 +93,7 @@ function plugin(Vue) {
                   break;
                 }
 
-                return _context2.abrupt('return', new Promise(function (resolve) {
+                return _context2.abrupt('return', new _promise2.default(function (resolve) {
                   var intervalId = setInterval(function () {
                     if (window[script]) {
                       clearInterval(intervalId);
